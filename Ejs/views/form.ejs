@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head');  %>
+</head>
+<body>
+    <%- include('./partials/nav')%>
+
+    <form action="/newProduct" enctype="multipart/form-data" method="post" class="container" style="height: 80vh;">
+        <div>
+            <label for="" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control">
+        </div>
+        <div>
+            <label for=""  class="form-label">Price</label>
+            <input type="text" name="price" class="form-control">
+        </div>
+        <div>
+            <input type="file" name="thumbnail">
+        </div>
+        <div>
+            <input type="submit" class="btn btn-primary">
+        </div>  
+    </form>
+
+    <a href="/getAll" class="btn btn-primary">Ver Productos</a>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

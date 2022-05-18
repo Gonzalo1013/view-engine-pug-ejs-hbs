@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head');  %>
+</head>
+<body>
+    <%- include('./partials/nav')%>
+
+    
+    <ul class="container" >
+        <% data.forEach((x)=>{ %>
+            <li style="margin: 5px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="uploads/<%= x.thumbnail%>" class="card-img-top" alt="<%= x.name %>">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= x.name %></h5>
+                        <p class="card-text">$ <%= x.price %></p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+    <!-- <img src="/silla.jpg" alt=""> -->
+    <a href="/form" class="btn btn-primary">Ir al formulario</a>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
